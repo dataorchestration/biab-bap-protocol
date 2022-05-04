@@ -27,61 +27,48 @@ data class ItemDao @Default constructor(
   val ondcCancellable: Boolean? = null,
   @param:JsonProperty("./ondc-time_to_ship")
   val ondcTimeToShip: String? = null,
-  @param:JsonProperty("./ondc-manufacturer_or_packer_name")
-  val ondcManufacturerOrPackerName: String? = null,
-  @param:JsonProperty("./ondc-manufacturer_or_packer_address")
-  val ondcManufacturerOrPackerAddress: String? = null,
-  @param:JsonProperty("./ondc-common_or_generic_name_of_commodity")
-  val ondcCommonOrGenericNameOfCommodity: String? = null,
-  @param:JsonProperty("./ondc-multiple_products_name_number_or_qty")
-  val ondcMultipleProductsNameNumberOrQty: String? = null,
-  @param:JsonProperty("./ondc-net_quantity_or_measure_of_commodity_in_pkg")
-  val ondcNetQuantityOrMeasureOfCommodityInPkg: String? = null,
-  @param:JsonProperty("../ondc-month_year_of_manufacture_packing_import")
-  val ondcMonthYearOfManufacturePackingImport: String? = null,
-  @param:JsonProperty("./ondc-imported_product_country_of_origin")
-  val ondcImportedProductCountryOfOrigin: String? = null,
-  @param:JsonProperty("./ondc-contact_details_consumer_care")
-  val ondcContactDetailsConsumerCare: String? = null,
+  @param:JsonProperty("./ondc-available_on_cod")
+  val ondcAvailableOnCod: String? = null,
 
-  @param:JsonProperty("./ondc-ingredients_info")
-  val ondcIngredientsInfo: String? = null,
-  @param:JsonProperty("./ondc-additives_info")
-  val ondcAdditivesInfo: String? = null,
-//  @param:JsonProperty("./ondc-manufacturer_or_packer_name")
-//  val ondcManufacturerOrPackerName: String? = null,
-//  @param:JsonProperty("./ondc-manufacturer_or_packer_address")
-//  val ondcManufacturerOrPackerAddress: String? = null,
-  @param:JsonProperty("./ondc-brand_owner_name")
-  val ondcBrandOwnerName: String? = null,
-  @param:JsonProperty("./ondc-brand_owner_address")
-  val ondcBrandOwnerAddress: String? = null,
-  @param:JsonProperty("./ondc-brand_owner_FSSAI_logo")
-  val ondcBrandOwnerFssaiLogo: String? = null,
-  @param:JsonProperty("./ondc-brand_owner_FSSAI_license_no")
-  val ondcBrandOwnerFssaiLicenseNo: String? = null,
-  @param:JsonProperty("./ondc-other_FSSAI_license_no")
-  val ondcOtherFssaiLicenseNo: String? = null,
-  @param:JsonProperty("../ondc-net_quantity")
-  val ondcNetQuantity: String? = null,
-  @param:JsonProperty("./ondc-importer_name")
-  val ondcImporterName: String? = null,
-  @param:JsonProperty("./ondc-importer_address")
-  val ondcImporterAddress: String? = null,
-  @param:JsonProperty("./ondc-importer_FSSAI_logo")
-  val ondcImporterFssaiLogo: String? = null,
-  @param:JsonProperty("./ondc-importer_FSSAI_license_no")
-  val ondcImporterFssaiLicenseNo: String? = null,
-//  @param:JsonProperty("./ondc-imported_product_country_of_origin")
-//  val ondcImportedProductCountryOfOrigin: String? = null,
-  @param:JsonProperty("./ondc-other_importer_name")
-  val ondcOtherImporterName: String? = null,
-  @param:JsonProperty("./ondc-other_importer_address")
-  val ondcOtherImporterAddress: String? = null,
-  @param:JsonProperty("./ondc-other_premises")
-  val ondcOtherPremises: String? = null,
-  @param:JsonProperty("./ondc-other_importer_country_of_origin")
-  val ondcOtherImporterCountryOfOrigin: String? = null,
-//  @param:JsonProperty("./ondc-contact_details_consumer_care")
-//  val ondcContactDetailsConsumerCare: String? = null,
+  @param:JsonProperty("./ondc-statutory_reqs_packaged_commodities")
+  val ondcStatutoryReqsPackagedCommodities: StatutoryReqsPackagedCommodities? = null,
+  @param:JsonProperty("./ondc-statutory_reqs_prepackaged_food")
+  val ondcStatutoryReqsPrepackagedFood: StatutoryReqsPrepackagedFood? = null,
+)
+
+
+data class StatutoryReqsPackagedCommodities  @Default constructor(
+  val manufacturerOrPackerName: String? = null,
+  val manufacturerOrPackerAddress: String? = null,
+  val commonOrGenericNameOfCommodity: String? = null,
+  val multipleProductsNameNumberOrQty: String? = null,
+  val netQuantityOrMeasureOfCommodityInPkg: String? = null,
+  val monthYearOfManufacturePackingImport: String? = null,
+  val importedProductCountryOfOrigin: String? = null,
+  val contactDetailsConsumerCare: String? = null,
+)
+
+
+data class StatutoryReqsPrepackagedFood  @Default constructor(
+  val ingredients_info: String? = null,
+  val nutritional_info: String? = null,
+  val additives_info: String? = null,
+  val manufacturerOrPackerName: String? = null,
+  val manufacturerOrPackerAddress: String? = null,
+  val brandOwnerName: String? = null,
+  val brandOwnerAddress: String? = null,
+  val brandOwnerFssaiLogo: String? = null,
+  val brand_ownerFssaiLicenseNo: String? = null,
+  val otherFssaiLicenseNo: String? = null,
+  val netQuantity: String? = null,
+  val importerName: String? = null,
+  val importerAddress: String? = null,
+  val importerFssaiLogo: String? = null,
+  val importerFssaiLicenseNo: String? = null,
+  val importedProductCountryOfOrigin: String? = null,
+  val otherImporterName: String? = null,
+  val otherImporterAddress: String? = null,
+  val otherPremises: String? = null,
+  val otherImporterCountryOfOrigin: String? = null,
+  val contactDetailsConsumerCare: String? = null,
 )
