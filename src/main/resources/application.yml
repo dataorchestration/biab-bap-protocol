@@ -6,7 +6,8 @@ logging:
     org:
       apache:
         coyote:
-          http11: WARN
+          http11: DEBUG
+    
 
 spring:
   jackson:
@@ -49,4 +50,3 @@ management:
       exposure:
         include:
           'configprops, env, health, loggers, metrics, mappings, httptrace'
-
